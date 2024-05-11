@@ -6,10 +6,6 @@ function ProductScreen({ onAddToCart }) {
   const { id } = useParams();
   const product = products.find((p) => p.id === parseInt(id));
 
-  const handleAddToCart = () => {
-    onAddToCart((prevCartItems) => [...prevCartItems, product]);
-  };
-
   return (
     <div className="product-screen">
       {product && (
@@ -21,7 +17,7 @@ function ProductScreen({ onAddToCart }) {
             <h3 className="product-screen-title">{product.title}</h3>
             <p className="product-screen-description">{product.description}</p>
             <p className="product-screen-price"><b>Price:</b> {product.price}</p>
-            <button onClick={handleAddToCart}>Add to Cart</button>
+            <button onClick={() => onAddToCart(product)}>Add to Cart</button>
           </div>
         </>
       )}

@@ -10,20 +10,30 @@ body {
   background-color: #005a8d;
   color: #fff;
   padding: 1rem;
+  display: flex;
+  justify-content: space-between; /* Align children elements (link and button) */
+  align-items: center; /* Vertically center children elements */
 }
 
 .back-to-home {
   text-decoration: none;
   color: #fff;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  display: block;
   font-size: 2rem; /* 1.5 times the root element's font size */
 }
 
 .back-to-home:hover {
   color: #ccc;
 }
+
+.add-to-cart {
+  background-color: #005a8d; /* Match header background color */
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
 
 /* Body styles */
 .container {
